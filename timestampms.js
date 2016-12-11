@@ -34,6 +34,5 @@ const timestampService = (inString) => {
   }
 }
 
-console.log(timestampService("December 15, 1969"))
 
 module.exports = timestampService
