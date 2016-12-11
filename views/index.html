@@ -1,17 +1,8 @@
-<!-- This is a static file -->
-<!-- served from your routes in server.js -->
-
-<!-- You might want to try something fancier: -->
-<!-- html/nunjucks docs: http://mozilla.github.io/nunjucks/ -->
-<!-- jade: http://jade-lang.com/ -->
-<!-- haml: http://haml.info/tutorial.html -->
-<!-- hbs(handlebars): http://handlebarsjs.com/expressions.html -->
-
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Welcome to Gomix!</title>
-    <meta name="description" content="A cool thing made with Gomix">
+    <title>Timestamp Microservice</title>
+    <meta name="description" content="A microservice to validate a timestamp string and returns a JSON containing either timestamp or null">
     <link id="favicon" rel="icon" href="https://gomix.com/favicon-app.ico" type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,29 +12,34 @@
   <body>
     <header>
       <h1>
-        Validate Timestamp
+        Validate a timestamp string
       </h1>
     </header>
 
     <main>
-      <p>Example usage:
-<p><code>https://phase-screen.gomix.me/December%2015,%202015</code></p>
-<p><code>https://phase-screen.gomix.me/1450137600</code></p>
-Example output:
-<p><code>{ "unix": 1450137600, "natural": "December 15, 2015" }</code></p>
+      <ul>Example usage:
+        <li>Pass a natural language timestamp string like this: <a href="https://phase-screen.gomix.me/August%2010,%201987">
+          <code>https://phase-screen.gomix.me/August%2010,%201987</code>
+          </a>
+        </li>
+        <li>Pass a UNIX timestamp value like this: <a href="https://phase-screen.gomix.me/555552000">
+          <code>https://phase-screen.gomix.me/555552000</code>
+        </a>
+        </li>
+      </ul>
+      <ul>Example output:
+        <li>
+          <code>{ "unix": 1450137600, "natural": "December 15, 2015" }</code>
+        </li>
+      </ul>
     </main>
 
     <footer>
+      <p>Developed by <a href="https://github.com/dickyw71" target="_blank">Richard Wheatley</a> and <a href="https://github.com/willnwhite" target="_blank">Will White</a></p>
       <a href="https://gomix.com">
         Remix this in Gomix
       </a>
     </footer>
-
-    <!-- Your web-app is https, so your scripts need to be too -->
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
-            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
-            crossorigin="anonymous"></script>
-    <script src="/client.js"></script>
 
   </body>
 </html>
